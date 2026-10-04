@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Mod Installation & Requirements</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-color: #f7fbff;
@@ -44,14 +45,99 @@
       --border-accent: #66aaff;
       --code-bg: #444;
     }
+    .ibm-plex-mono-thin {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 100;
+  font-style: normal;
+    }
+
+    .ibm-plex-mono-extralight {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 200;
+    font-style: normal;
+    }
+
+    .ibm-plex-mono-light {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+    }
+
+    .ibm-plex-mono-regular {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    }
+
+    .ibm-plex-mono-medium {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+    }
+
+    .ibm-plex-mono-semibold {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-style: normal;
+    }
+
+    .ibm-plex-mono-bold {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    }
+
+    .ibm-plex-mono-thin-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 100;
+    font-style: italic;
+    }
+
+    .ibm-plex-mono-extralight-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 200;
+    font-style: italic;
+    }
+
+    .ibm-plex-mono-light-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    font-style: italic;
+    }
+
+    .ibm-plex-mono-regular-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+    }
+
+    .ibm-plex-mono-medium-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-style: italic;
+    }
+
+    .ibm-plex-mono-semibold-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-style: italic;
+    }
+
+    .ibm-plex-mono-bold-italic {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+    }
+
 
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'IBM Plex Mono', monospace;
       font-size: 17px;
       line-height: 1.7;
       background-color: var(--bg-color);
       color: var(--text-color);
       padding: 40px 20px;
+      font-style: bold;
       display: flex;
       justify-content: center;
       transition: background 0.3s, color 0.3s;
@@ -82,7 +168,7 @@
     .toggle-button {
       background: var(--card-bg);
       color: var(--text-color);
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'IBM Plex Mono', monospace;
       border: 2px solid var(--border-accent);
       padding: 6px 14px;
       border-radius: 8px;
@@ -187,7 +273,7 @@
 
     .website-button {
       display: inline-block;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'IBM Plex Sans Condensed', monospace;
       font-weight: bold;
       font-size: 1.1em;
       color: #f7fbff;
@@ -204,20 +290,21 @@
     }
 
     details {
-      margin-bottom: 1.2em;
+      margin-bottom: 0.5em;
       background-color: var(--highlight);
       border-left: 4px solid var(--border-accent);
       border-radius: 8px;
-      padding: 10px 14px;
+      padding: 6px 6px;
     }
 
     summary {
+    justify-content: center;
       cursor: pointer;
       font-weight: bold;
-      font-size: 1.1em;
+      font-size: 1.2em;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 1px;
     }
 
     summary::-webkit-details-marker {
@@ -225,8 +312,8 @@
     }
 
     summary .arrow {
-      width: 10px;
-      height: 10px;
+      width: 15px;
+      height: 15px;
       flex-shrink: 0;
       transition: transform 0.25s ease;
       fill: var(--text-color);
@@ -235,6 +322,68 @@
     details[open] summary .arrow {
       transform: rotate(90deg);
     }
+
+    .card p img {
+      vertical-align: middle;
+      margin-right: 3px;
+    }
+
+    .website-button strong {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .website-button strong img {
+      margin-right: 0;
+      flex-shrink: 0;
+    }
+
+    a.website-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 10px;
+      line-height: 1.4;
+    }
+
+    a.website-button strong {
+      display: flex;
+      align-items: center;
+    }
+    details.tip-box {
+    background: var(--tip-bg);
+    color: var(--tip-color);
+    border-radius: 8px;
+    border-left: 4px solid var(--border-accent-tip);
+}
+
+details.tip-box summary {
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+details.tip-box summary .arrow {
+    fill: var(--tip-color);
+}
+summary {
+    position: relative;
+    justify-content: center;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+summary .arrow {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+details[open] summary .arrow {
+    transform: translateY(-50%) rotate(90deg);
+}
   </style>
 </head>
 <body>
@@ -245,44 +394,40 @@
 
     <img src="https://i.ibb.co/7N0GyXBM/Copy-of-Patreon-Banner-Template.png" alt="Mod Banner" class="banner">
 
-       <div class="tip-box">
-    <strong>⚠️REQUIRED </strong> <br>
+<details class="tip-box">
+    <summary>
+        <svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>
+    <img src="https://i.ibb.co/GvnDhVj5/headline-exclamationmark.png" alt="" width="32" height="32" /> IMPORTANT</summary>
+   
     
-<p style="text-align: center;"><a href="https://www.patreon.com/posts/midnitetech-121729961" target="_blank" class="website-button"><strong>📁midnitetech_modlibrary</strong></a><br /></p>
-
- <p>Make sure it's installed in your <strong>Mods</strong> folder and that you have the latest version. All <code>.ts4script</code> files must be no more than <strong>one folder deep</strong> inside your Mods folder, as shown below.</p>
+<p style="text-align: center;">
+    <a class="website-button" href="https://www.patreon.com/posts/midnitetech-121729961" target="_blank">
+        <strong><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="32" height="32" style="vertical-align: middle;" /> midnitetech_modlibrary</strong>
+    </a>
+</p>
+ <p><strong>My ModLibrary is required for most of my mods. Ensure it's installed in your Mods folder and that you have the latest version. All <code>.ts4script</code> files must be no more than <strong>one folder deep</strong> inside your Mods folder, as shown below.</strong></p>
 
       ✅ <strong>Correct:</strong><br>
       <code>Mods/MyModFolder/MyMod.ts4script</code><br>
       ❌ <strong>Incorrect:</strong><br>
       <code>Mods/MyModFolder/AnotherFolder/MyMod.ts4script</code>
-    </div>
+    </details>
 
-<details>
-  <summary>
-    <svg class="arrow" viewBox="0 0 8 8">
-      <path d="M0 0 L6 4 L0 8 Z"/>
-    </svg>
-    ℹ️ Key & Library Information
-  </summary>
+<details> <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg><img src="https://i.ibb.co/cKHFdsPJ/headline-activitycomplete.png" alt="" width="50" height="50" /> INFO & LINKS</summary>
 
-  <p style="margin-top: 1em;">
-    <a href="https://lot51.cc/mods/core-library">🌐</a>
-    <strong>Requires Lot 51's Core Library</strong>
-  </p>
-
-  <p>
-    <a href="https://www.patreon.com/posts/121729961">📁</a>
-    <strong>Requires midnitetech_modlibrary</strong>
-  </p>
-  
-    <p>
-   <strong>🛠️ Currently NOT included in the All-in-One zip as being overhauled. Can still be downloaded from the links below.</strong>
-  </p>
-
+<p style="text-align: center;">
+    <a class="website-button" href="https://lot51.cc/mods/core-library" target="_blank">
+        <strong><img src="https://i.ibb.co/Qj1M31ct/icon-core-lg.png" alt="" width="32" height="32" style="vertical-align: middle;" /> Lot 51's Core Library</strong>
+    </a>
+</p>
+  <p style="text-align: center;">
+    <a class="website-button" href="https://www.patreon.com/posts/midnitetech-121729961" target="_blank">
+        <strong><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="32" height="32" style="vertical-align: middle;" /> midnitetech_modlibrary</strong>
+    </a>
+</p>
  
-    <strong>What's changing?</strong><br>
-    My mods are currently being moved over to depend on <strong>midnitetech_modlibrary</strong> instead of multiple separate script files. As I've added more advanced scripting over time, maintaining one shared library makes updates easier and keeps my mods more reliable.
+    <strong>What's new?</strong><br>
+    My mods have mostly been transferred to depend on my <strong>midnitetech_modlibrary</strong> instead of multiple separate script files. As I've added more advanced scripting over time, maintaining one shared library makes updates easier and keeps my mods more reliable. If a mod you know is missing from this list, I'm probably overhauling it.
 
   <p>
     <strong>What is a script library?</strong><br>
@@ -291,109 +436,139 @@
 </details>
 
 
-    <details>
-      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>🌟Aspirations</summary>
+    <details> <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg><img src="https://i.ibb.co/bg4qRF4y/Life-Skills-Cat.png" alt="" width="50" height="50" /> ASPIRATIONS</summary>
     
-<ul>
-
-<li><a href="https://www.patreon.com/posts/career-focused-110878677"><strong>🪜Career-Focused Aspiration</strong></a> <b>  <strong><a href="https://www.patreon.com/posts/121729961">📁</a><strong>&nbsp;</strong><strong><br /></strong><strong><strong>🎓 Discover University DLC<br />OR<br />👩🏻‍🎓 SimU: Academic Life</strong><strong> <br />💲 Simoleonz Side Hustlez<strong> <br /><br />
-<li><a href="https://www.patreon.com/posts/111574483"><strong>❇️Well-Rounded Aspiration</strong></a> <br /><strong>💲 Simoleonz Side Hustlez<strong> <br /><br />
-<li><a href="https://www.patreon.com/posts/discover-life-96534524"><strong>🔎Discover Life Aspiration</strong></a><strong>&nbsp;</strong><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;</strong><br /></li>
-<li><a href="https://www.patreon.com/posts/130702004"><strong>🏠Home &amp; Hobbies Aspiration Pack</strong></a> <b></b> <a href="https://www.patreon.com/posts/121729961">📁</a></li>
-</ul>
-    </details>
-    
-    <details>
-      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>🏢Careers</summary>
-    
-<ul>
-<li><a href="https://www.patreon.com/midnitetech/posts/all-hours-career-171107208"><strong>🕝All Hours Career Pack REDUX</strong></a><strong> </strong> <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-
-<li><a href="https://www.patreon.com/posts/all-hours-full-103336939"><strong>🕝All Hours Career Pack</strong></a><strong> </strong> <a href="https://lot51.cc/mods/core-library">🌐</a> <strong><br />(Old Version)<br /></strong>👥 <strong>Get Together Required</strong><br /><strong>🌞 Seasons Required</strong><br /><strong>♻️ Eco Lifestyle Required</strong><br /><strong>💼 Get to Work Required</strong><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/156171039"><strong>🏦Banking</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/sequential-art-107834810"><strong>💥Comic Creator</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/115692611"><strong>💆Chiropractor</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/156166709"><strong>🛡️Cybersecurity Hacker</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/flex-part-time-102582002"><strong>👨‍💼Flex Part-Time Career Pack</strong></a><strong> </strong>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/freelance-3d-111545916"><strong>🖌️Freelance 3D Modeler</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/123913485"><strong>🕹️Game Developer</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/117561715"><strong>🌿Holistic Health Consultant</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-
-<li><a href="https://www.patreon.com/posts/156170165"><strong>💼HR</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/156171773"><strong>🖥️IT Systems &amp; Support</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/110646387"><strong>📚Librarian</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/149335778"><strong>𓂃🪶Literary Publicist</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/odd-jobs-36546404"><strong>💵Odd Jobs Megapack</strong></a><br /><strong></strong>🏝️ <strong>Island Living Required</strong><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/139108219">℞ <strong>Pharmacist</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/156169057"><strong>🏡Real Estate</strong></a>  <a href="https://www.patreon.com/posts/121729961"> 📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/full-time-retail-108866447"><strong>🛍️Retail Career Pack</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/128375289"><strong>📅Saturday Solutions Career Pack</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/storytelling-110155789"><strong>🧩Storytelling Career Pack</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/travel-writer-155453654"><strong>✈️Travel Writer</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-</ul>
+<p><a href="https://www.patreon.com/posts/career-focused-110878677"><strong><img src="https://i.ibb.co/9mJv1nKC/Career-Focused.png" alt="" width="28" height="28" /> Career-Focused Aspiration<br /></strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><strong>Requires:<br> <img style="vertical-align: middle;" src="https://i.ibb.co/DPRGjPDQ/SSH.png" alt="" width="22" height="22" /> Simoleonz Side Hustlez<br />&amp;<br /></strong></span></strong></strong><strong><strong><span style="font-size: small;"><strong><img style="vertical-align: middle;" src="https://i.ibb.co/SDhYd6Md/Sims4-universtity-fac-expensionpack-08-icons-1.png" alt="" width="22" height="22" /> Discover University DLC<br />OR<br /><strong><img style="vertical-align: middle;" src="https://i.ibb.co/JwKR4KF2/Sim-U-Logo.png" alt="" width="22" height="22" /> SimU: Academic Life<br /></strong><span style="font-size: small;"><img style="vertical-align: middle;" src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/career-focused-110878677"><strong><img src="https://i.ibb.co/d4pcdkzZ/Well-Rounded.png" alt="" width="28" height="28" /> Well Rounded Aspiration<br /></strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><strong>Requires:<br><img style="vertical-align: middle;" src="https://i.ibb.co/DPRGjPDQ/SSH.png" alt="" width="22" height="22" /> Simoleonz Side Hustlez<br />OR<br /><img style="vertical-align: middle;" src="https://i.ibb.co/SXSLp2f4/icon-pack-gp05-128.png" alt="" width="22" height="22" /> Parenthood DLC<br />&amp;<br /><img style="vertical-align: middle;" src="https://i.ibb.co/FbhGkk6H/icon-pack-ep05-128.png" alt="" width="22" height="22" /> Seasons DLC<br />OR<br /></strong></span></strong></strong><strong><strong><span style="font-size: small;"><strong><img style="vertical-align: middle;" src="https://i.ibb.co/rRz9kFXN/icon-pack-ep06-128.png" alt="" width="22" height="22" /> Get Famous DLC<br />OR<br /><img style="vertical-align: middle;" src="https://i.ibb.co/gMQZPWgt/asa.png" alt="" width="22" height="22" />Any After-School Activity mod<br /></strong></span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/discover-life-96534524"><strong><img src="https://i.ibb.co/CpJrDgYm/Discover-Life-Aspiration.png" alt="" width="28" height="28" /> Discover Life Aspiration</strong></a><strong> </strong></p>
+<p><a href="https://www.patreon.com/posts/130702004"><strong><img src="https://i.ibb.co/DgCc9VD2/Home-Hobbies-Aspiration-Category.png" alt="" width="28" height="28" /> Home &amp; Hobbies Aspiration Pack</strong></a></p>
+<p style="padding-left: 30px;"><strong><span style="font-size: small;"><img style="vertical-align: middle;" src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></p>
 </details>
     
     
-    <details>
-      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>🧪Gameplay Mods</summary>
+    <details> <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg><img src="https://i.ibb.co/MD2BvPR2/sims-4-jeu-de-base-game-icones-icons-362.png" alt="" width="50" height="50" /> CAREERS</summary>
+    
+<p><a href="https://www.patreon.com/midnitetech/posts/all-hours-career-171107208"><strong><img src="https://i.ibb.co/qYXNKD0R/Copy-of-All-Hours.png" alt="" width="28" height="28" /> All Hours Career Pack (REDUX)</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/all-hours-full-103336939"><strong><img src="https://i.ibb.co/5WvNKXPr/All-Hours-Agency.png" alt="" width="28" height="28" /> All Hours Career Pack (OLD)</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required<br /></span></strong></strong><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/1BMGw17/icon-pack-ep02-128.png" alt="" width="18" height="18" /> Get Together Required<br /></span></strong></strong><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/FbhGkk6H/icon-pack-ep05-128.png" alt="" width="18" height="18" /> Seasons Required<br /></span></strong></strong><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/S70Vc1cB/Sims4-Ecologie-Eco-Life-Style-expansionpack-09-icons-1.png" alt="" width="18" height="18" /> Eco Lifestyle Required<br /></span></strong></strong><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/W4mzV5VB/icon-pack-ep01-128.png" alt="" width="18" height="18" /> Get To Work Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/156171039"><strong><img src="https://i.ibb.co/Wvz7msb1/headline-simoleon-bb40d6575241ca1a.png" alt="" width="28" height="28" /> Banking</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/sequential-art-107834810"><strong><img src="https://i.ibb.co/MzxPG6g/Comic-Creator.png" alt="" width="28" height="28" /> Comic Creator</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/115692611"><strong><img src="https://i.ibb.co/wrpYmbF4/sims-4-addon-01-au-travail-icon-15.png" alt="" width="28" height="28" /> Chiropractor</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/156166709"><strong><img src="https://i.ibb.co/GvT9ykYL/Cybersecurity-Hacker.png" alt="" width="28" height="28" /> Cybersecurity Hacker</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/flex-part-time-102582002"><strong><img src="https://i.ibb.co/1tk1T5kf/headline-timecard-a88019cec4257a51.png" alt="" width="28" height="28" /> Flex Part-Time Career Pack</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/freelance-3d-111545916"><strong><img src="https://i.ibb.co/Y7TFQBCs/3-D-Modeler.png" alt="" width="28" height="28" /> Freelance 3D Modeler</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/123913485"><strong><img src="https://i.ibb.co/kgnV248d/headline-controllervideogame-f29b30c9dffc6a6b.png" alt="" width="28" height="28" /> Game Developer</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/117561715"><strong><img src="https://i.ibb.co/sv0fW7W2/HHC.png" alt="" width="28" height="28" /> Holistic Health Consultant</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/156170165"><strong><img src="https://i.ibb.co/fzw114VV/sims-4-addon-02-vivre-ensemble-icon-42.png" alt="" width="28" height="28" /> HR</strong></a></p>
+<p style="padding-left: 30px;"><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></p>
+<p><a href="https://www.patreon.com/posts/156171773"><strong><img src="https://i.ibb.co/mrHKwvym/IT.png" alt="" width="28" height="28" /> IT Systems &amp; Support</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/110646387"><strong><img src="https://i.ibb.co/GvLBd8dt/Librarian.png" alt="" width="28" height="28" /> Librarian</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/149335778"><strong><img src="https://i.ibb.co/QvHKMsJH/Literary-Publicist.png" alt="" width="28" height="28" /> Literary Publicist</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/odd-jobs-36546404"><strong><img src="https://i.ibb.co/7NbZBXgZ/headline-scenario-makingmoney.png" alt="" width="28" height="28" /> Odd Jobs Megapack</strong></a></p>
+<p style="padding-left: 30px;"><strong><span style="font-size: small;"><img src="https://i.ibb.co/h1tFXyC4/icon-pack-ep07-128.png" alt="" width="18" height="18" /> Island Living Required</span></strong></p>
+<p><a href="https://www.patreon.com/posts/139108219"><img src="https://i.ibb.co/27JyWJhF/Pharmacist.png" alt="" width="28" height="28" /> <strong>Pharmacist</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/156169057"><strong><img src="https://i.ibb.co/m5QDkSBv/Real-Estate.png" alt="" width="28" height="28" /> Real Estate</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/full-time-retail-108866447"><strong><img src="https://i.ibb.co/nqhGMDz8/Retail-Pack.png" alt="" width="28" height="28" /> Retail Career Pack</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/128375289"><strong><img src="https://i.ibb.co/r245qf3S/Saturday-Solutions.png" alt="" width="28" height="28" /> Saturday Solutions Career Pack</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/storytelling-110155789"><strong><img src="https://i.ibb.co/0pCyYb4s/Storytelling-Pack.png" alt="" width="28" height="28" /> Storytelling Career Pack</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/travel-writer-155453654"><strong><img src="https://i.ibb.co/kVv6CYrB/Travel-Writer-Main.png" alt="" width="28" height="28" /> Travel Writer</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></strong></p>
+</details>
+    
+    
+    <details> <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg><img src="https://i.ibb.co/1frrQFtD/0x-AFB0-D73-AE057487.png" alt="" width="50" height="50" /> GAMEPLAY MODS</summary>
 
-<ul>
-<li><a href="https://www.patreon.com/posts/call-me-maybe-127818072?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>📵Call Me, Maybe</strong></a>🛠️<a href="https://lot51.cc/mods/core-library">🌐</a><br /><br /></li>
-
-
-
-<li><a href="https://www.patreon.com/posts/cozy-winter-free-145359598"><strong>❄️Cozy Winter Moments</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><strong><strong>🎄Holiday Celebration Required (free dlc) <br /><br /></strong></li>
-
-<li><a href="https://www.patreon.com/posts/custom-uniforms-102539962"><strong>🦺Custom Uniforms</strong></a>   <a href="https://www.patreon.com/posts/121729961">📁</a><br /><strong><br>
-
-<li><a href="https://www.patreon.com/posts/doomscrolling-103355360?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>📲Doomscrolling</strong></a> <a href="https://www.patreon.com/posts/121729961">📁</a> <br /><strong> <br /></strong></li>
-<li><a href="https://www.patreon.com/posts/lyrical-icon-109106475?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>🎤Lyrical Icon Scenario</strong></a><br /><strong>🏙️ City Living Required<br /><br /></strong></li>
-<li><a href="https://www.patreon.com/posts/meetup-app-77408236?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>👥Meetup App</strong></a> <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/144901579"><strong>📓Noteworthy Notebook</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><strong><br /><br /></strong></li>
-<li><a href="https://www.patreon.com/posts/107054469"><strong>🔌Power Outages</strong></a> <a href="https://www.patreon.com/posts/121729961">📁</a><strong> </strong><strong><br />🌞 Seasons Required<br /><br /></strong></li>
-<li><a href="https://www.patreon.com/posts/103081415"><strong>📖Simazon Unlimited</strong></a> <a href="https://www.patreon.com/posts/121729961">📁</a> <br /><br /></li>
-<li><a href="https://www.patreon.com/posts/102169392"><strong>💲Simoleonz Side Hustlez</strong></a> <a href="https://www.patreon.com/posts/121729961">📁</a><br /><strong> <br /></strong></li>
-<li><a href="https://www.patreon.com/posts/148619730"><strong>🎓SimU: Academic Life</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/106270148"><strong>✍️Write Books Overhaul</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a><br /><br /></li>
-<li><a href="https://www.patreon.com/posts/135173807"><strong>🌍World Rename Mod</strong></a>  <a href="https://www.patreon.com/posts/121729961">📁</a></li>
-</ul>
+<p><a href="https://www.patreon.com/posts/call-me-maybe-127818072?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong><img src="https://i.ibb.co/xKd3VcZs/Les-Sims-4-Escape-Enneig-e-40.png" alt="" width="28" height="28" /> Call Me, Maybe</strong></a></p>
+<p style="padding-left: 30px;"><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/Qj1M31ct/icon-core-lg.png" alt="" width="18" height="18" /> Core Library Required</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/cozy-winter-free-145359598"><strong><img src="https://i.ibb.co/r2Trc2g8/0x4-F75-B4-DD4537-CE0-F.png" alt="" width="28" height="28" /> Cozy Winter Moments</strong></a></p>
+<p style="padding-left: 30px;"><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required<br /></span></strong><strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/TBC0Mz66/icon-pack-fp01-128.png" alt="" width="18" height="18" /> Holiday Celebration Required (free dlc)</span></strong></strong></p>
+<p><a href="https://www.patreon.com/posts/custom-uniforms-102539962"><strong><img src="https://i.ibb.co/rfwnW7R3/sims-4-kit-objets-02-ambiance-patio-icon-2.png" alt="" width="28" height="28" /> Custom Uniforms</strong></a><strong><br /></strong></p>
+<p style="padding-left: 30px;"><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></p>
+<p><a href="https://www.patreon.com/posts/doomscrolling-103355360?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong><img src="https://i.ibb.co/Kxf0LMLd/0x-FEED889-AF683-ED97.png" alt="" width="28" height="28" /> Doomscrolling</strong></a><strong><br /></strong></p>
+<p style="padding-left: 30px;"><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></p>
+<p><a href="https://www.patreon.com/posts/lyrical-icon-109106475?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong><img src="https://i.ibb.co/dwcLNnjC/Untitled-design.png" alt="" width="28" height="28" /> Lyrical Icon Scenario<br /></strong></a></p>
+<p style="padding-left: 30px;"><strong><span style="font-size: small;"> <img src="https://i.ibb.co/Ng48CK6n/icon-pack-ep03-128.png" alt="" width="18" height="18" />City Living Required<br /></span></strong></p>
+<p><a href="https://www.patreon.com/posts/meetup-app-77408236?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong><img src="https://i.ibb.co/7xTWcbKJ/Meet-Up.png" alt="" width="28" height="28" /> Meetup App</strong></a><strong><br /></strong></p>
+<p style="padding-left: 30px;"><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></p>
+<p><a href="https://www.patreon.com/posts/144901579"><strong><img src="https://i.ibb.co/jPfpXyR0/Penmanship.png" alt="" width="28" height="28" /> Noteworthy Notebook</strong></a><strong><br /></strong></p>
+<p style="padding-left: 30px;"><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></p>
+<p><a href="https://www.patreon.com/posts/107054469"><strong><img src="https://i.ibb.co/g0Kq4Qv/Sims4-icons-EP05-pack-seasons-saisons-32.png" alt="" width="28" height="28" /> Power Outages</strong></a><strong><br /></strong></p>
+<p style="padding-left: 30px;"><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required<br /></span></strong><strong><span style="font-size: small;"><img src="https://i.ibb.co/FbhGkk6H/icon-pack-ep05-128.png" alt="" width="18" height="18" />Seasons Required</span></strong></p>
+<p><a href="https://www.patreon.com/posts/103081415"><strong><img src="https://i.ibb.co/BVN2bgYy/0x6-E6131-EA6-B757618-1.png" alt="" width="28" height="28" /> Simazon Unlimited</strong></a><strong><br /></strong></p>
+<p style="padding-left: 30px;"><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></p>
+<p><a href="https://www.patreon.com/posts/102169392"><strong><img src="https://i.ibb.co/DPRGjPDQ/SSH.png" alt="" width="28" height="28" /> Simoleonz Side Hustlez</strong></a><strong><br /></strong></p>
+<p style="padding-left: 30px;"><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></p>
+<p><a href="https://www.patreon.com/posts/148619730"><strong><img src="https://i.ibb.co/JwKR4KF2/Sim-U-Logo.png" alt="" width="28" height="28" /> SimU: Academic Life</strong></a><strong><br /></strong></p>
+<p style="padding-left: 30px;"><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></p>
+<p><a href="https://www.patreon.com/posts/106270148"><strong><img src="https://i.ibb.co/jZwb0TCm/headline-Writer-75705ae599190485.png" alt="" width="28" height="28" /> Write Books Overhaul</strong></a><strong><br /></strong></p>
+<p style="padding-left: 30px;"><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></p>
+<p><a href="https://www.patreon.com/posts/135173807"><strong><img src="https://i.ibb.co/XrKnyqbV/Untitled-design.png" alt="" width="28" height="28" /> World Rename Mod</strong></a><strong><br /></strong></p>
+<p style="padding-left: 30px;"><strong><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> ModLibrary Required</span></strong></p>
 
     </details>
     
-    <details>
-      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>🧼Mini Mods</summary>
-<ul>
+    <details> <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg><img src="https://i.ibb.co/FbtH7BqK/Folder.png" alt="" width="50" height="50" /> MINI MODS</summary>
+<p><a href="https://www.patreon.com/posts/mini-mods-69172769"><strong><img src="https://i.ibb.co/673bJcNh/headline-book-7a944bd8a480dcef.png" alt="" width="28" height="28" /> Book Fix</strong></a></p>
+<p style="padding-left: 30px;"><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> <strong>ModLibrary Required</strong></span></p>
+<p><a href="https://www.patreon.com/posts/mini-mods-69172769"><strong><img src="https://i.ibb.co/8D9QrSMQ/sims-4-kit-objets-09-accessoires-vintage-icon-8.png" alt="" width="28" height="28" /> Eyelashes Hider</strong></a></p>
+<p><a href="https://www.patreon.com/posts/mini-mods-69172769"><strong><img src="https://i.ibb.co/KjnzRxYt/Sims-4-Get-famous-gloire-addon-pack-extansion-icon-13.png" alt="" width="28" height="28" /> Facepaint Hider</strong></a></p>
+<p><a href="https://www.patreon.com/posts/mini-mods-69172769"><strong><img src="https://i.ibb.co/rRNdy5d1/headline-sink-0e1923d8f82205c9.png" alt="" width="28" height="28" /> Facial Cleanser 4 All<br /></strong></a></p>
+<p style="padding-left: 30px;"><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> <strong>ModLibrary Required<br /></strong></span><span style="font-size: small;"><img src="https://i.ibb.co/4Z9TMX9K/icon-pack-ep12-128.png" alt="" width="18" height="18" /> <strong>High School Years Required</strong></span></p>
+<p><a href="https://www.patreon.com/posts/mini-mods-69172769"><strong><img src="https://i.ibb.co/x9n5bQp/headline-showerstall-9e0219d1567d7494.png" alt="" width="28" height="28" /> Faster Take Shower</strong></a></p>
+<p><a href="https://www.patreon.com/posts/mini-mods-69172769"><strong><img src="https://i.ibb.co/YFX9Yfcg/sims-4-kit-objets-09-accessoires-vintage-icon-2.png" alt="" width="28" height="28" /> Makeup Hider</strong></a></p>
+<p><a href="https://www.patreon.com/posts/mini-mods-69172769"><strong><img src="https://i.ibb.co/WWFSFCf0/sims-4-pack-jeu-04-vampires-icon-3.png" alt="" width="28" height="28" /> Occult Eye Color Hider</strong></a></p>
+<p><a href="https://www.patreon.com/posts/69172769"><strong><img src="https://i.ibb.co/CKPgf2c2/headline-careerpromotion-a6ed756af9cb04a1.png" alt="" width="28" height="28" /> Switch Career Branch</strong></a></p>
+<p style="padding-left: 30px;"><span style="font-size: small;"><img src="https://i.ibb.co/ZZtpnM6/MODLIB.png" alt="" width="18" height="18" /> <strong>ModLibrary Required</strong></span></p>
+</details>
 
-<li><a href="https://www.patreon.com/posts/mini-mods-69172769"><strong>📖Book Fix</strong></a>   <a href="https://www.patreon.com/posts/121729961">📁</a><br /><strong><br>
+<details> <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg><img src="https://i.ibb.co/xts5qH2V/achievement-beyondrepairs.png" alt="" width="50" height="50" /> TROUBLESHOOTING</summary>
+<p>Something not working properly? Check:<br /><strong>A.</strong> You have the latest version of the mod<br /><strong>B.</strong> Any dependencies are up-to-date and installed (i.e. my <b>ModLibrary</b>)<br /> <strong>C.</strong> You have enabled mods/CC in-game and restarted<br /> <strong>D.</strong> No duplicates present (outdated versions of mods can conflict with current versions)<br /> <strong>E.</strong> Tried loading your game with JUST the problem mod and its dependencies, if applicable<br /></p>
 
-<li><a href="https://www.patreon.com/posts/mini-mods-69172769"><strong>👁️Eyelashes Hider<br /></strong></a><br><br /></li>
+</details>
 
-<li><a href="https://www.patreon.com/posts/mini-mods-69172769"><strong>🎭Facepaint Hider<br /></strong></a><br><br /></li>
+<details> <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg><img src="https://i.ibb.co/b5yJgr7k/headline-Question-Mark-873da6c8ff732f1f.png" alt="" width="50" height="50" /> GET HELP & REPORT BUGS</summary>
+<img src="https://i.makeagif.com/media/11-27-2017/XaStoM.gif"/>
+<p>Found a bug? In‑game, open the cheat console (Ctrl+Shift+C), type <code>midnitetech.sim_report</code>, and press Enter. <br /><br />Using the file path it lists, find <code>midnitetech_log.html</code> and send it to me on <a href="https://discord.com/invite/4JsntVJyg4">Discord</a> or through my <a href="https://midnitetechmods.com/contact">Contact Form</a>, along with your <code>midnitetech_settings.json</code> if the issue is related to <b>AnyShift</b> or <b>Custom Uniforms</b>.<br /><br />It makes it much easier for me to troubleshoot with that, and please don't worry if you think it's a 'you' problem; I'll <i>always</i> help.<br /><br />Command not working? If it doesn't register at all, or you get an exception/error mentioning a missing midnitetech module, then you have an outdated or incorrectly installed version of my ModLibrary. Delete it, (search your Mods folder for *modlibrary) and reinstall the latest version, linked at the top of this guide.</p>
 
-<li><a href="https://www.patreon.com/posts/mini-mods-69172769"><strong>🧼Facial Cleanser 4 All</strong></a><br>🏫 <strong>High School Years Required<br /><br /></strong></li>
-<li><a href="https://www.patreon.com/posts/mini-mods-69172769"><strong>🚿Faster Take Shower</strong></a><br /><br /></li>
+</details>
+    
 
-<li><a href="https://www.patreon.com/posts/mini-mods-69172769"><strong>💄Makeup Hider<br /></strong></a><br><br /></li>
-
-<li><a href="https://www.patreon.com/posts/mini-mods-69172769"><strong>👽Occult Eye Color Hider<br /></strong></a><br><br /></li>
-
-<li><strong><a href="https://www.patreon.com/posts/69172769">🔄Switch Career Branch</a> <a href="https://www.patreon.com/posts/121729961">📁</a></li>
-</ul>
-
-    </details>
 
     <div class="footer">
-    <p style="text-align: center;">For troubleshooting, update status and all other info, visit my site:</p>
-    <div style="text-align: center; margin-top: 1em;">
-      <a href="https://midnitetechmods.com/" target="_blank" class="website-button">🌐 midnitetechmods.com</a>
-    </div>
-     <p style="text-align: center;">Enjoy the mods, and happy Simming!<br>
-      <strong>~midnitetech</strong>💚<div style="text-align: center; margin-top: 1em;">
-
+<p style="text-align: center;"><b>For contact info, mod status & more, visit my site:</b></p>
+<div style="text-align: center; margin-top: 1em;"><a class="website-button" href="https://midnitetechmods.com/" target="_blank"><img src="https://64.media.tumblr.com/a1472046707cc95430c82727925d3464/d54814ee58e4945d-31/s2048x3072/6ebfaad8e5a177f3e1e50229606ada7c5f52a8d2.png" alt="" width="34" height="34" /> midnitetechmods.com</a></div>
+<p style="text-align: center;"><b>Enjoy the mods, and happy Simming!</b><br /> <strong>~midnitetech</strong>💚</p>
+</div>
+</div>
   <script>
     function toggleMode() {
       document.body.classList.toggle('dark');
     }
+
+    window.addEventListener('pageshow', function () {
+      document.querySelectorAll('details').forEach(function (details) {
+        details.open = false;
+      });
+    });
   </script>
 </body>
 </html>
