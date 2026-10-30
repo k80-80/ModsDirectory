@@ -14,7 +14,7 @@ if (themeToggle) {
   function applyTheme() {
     document.body.classList.toggle('dark', dark);
     themeToggle.setAttribute('aria-pressed', String(dark));
-    themeToggle.textContent = dark ? '☀ Light mode' : '◐ Dark mode';
+    themeToggle.textContent = dark ? '☀ Light Mode' : '◐ Dark Mode';
   }
 
   themeToggle.addEventListener('click', () => {
