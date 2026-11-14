@@ -12,10 +12,16 @@
 
 * { box-sizing: border-box; }
 
+body {
+  font-family: "Electronic Arts Text", Arial, sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6,
 .eyebrow,
-.card-heading .title,
-.resources summary {
+summary,
+.section-header,
+.feature-title,
+.faq-question {
   font-family: "SimsHeadline", Arial, sans-serif;
 }
 
