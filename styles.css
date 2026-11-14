@@ -12,11 +12,11 @@
 
 * { box-sizing: border-box; }
 
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font: 16px/1.6 "SimsHeadline", Arial, sans-serif;
+h1, h2, h3, h4, h5, h6,
+.eyebrow,
+.card-heading .title,
+.resources summary {
+  font-family: "SimsHeadline", Arial, sans-serif;
 }
 
 body * { font-family: "SimsHeadline", Arial, sans-serif; }
